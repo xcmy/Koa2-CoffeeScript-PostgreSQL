@@ -55,16 +55,16 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 ## 项目搭建
 
 
-- 使用***WebStorm***创建一个空项目kcpDemo
+- 使用**WebStorm**创建一个空项目kcpDemo
 - 创建一个入口文件`index.coffee`
 - 创建[***package.json文件***](http://javascript.ruanyifeng.com/nodejs/packagejson.html#toc4)。（`package.json`文件可以手工编写，也可以使用`npm init`命令自动生成，输入名字和`main`文件`index.coffee`，注意名字不能大写，其余按回车自动生成）。
 
-    
+
+
     //到项目根目录下  
     $ cd kcpDemo  
     $ npm init  
     
-
 生成的`package.json`文件如下
 
 ```json
