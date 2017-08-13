@@ -149,9 +149,9 @@ hello koa2
 - 在根目录下创建一个文件夹lib，用来保存数据模型，在lib下创建`index.coffee`来初始化数据库。
 
 ```coffeescript
-//index.coffee文件
+#index.coffee文件
 Sequelize = require "sequelize"
-//
+
 sequelize = new Sequelize("postgres://:@localhost:5432/xcmy")
 
 sequelize.authenticate()
@@ -173,7 +173,7 @@ app = new koa()
 app.use (ctx)->
   ctx.body = "hello koa2"
 
-//数据库初始化
+#数据库初始化
 require("./lib")
 
 app.listen 3000,(err)->
@@ -495,8 +495,8 @@ Date: Sat, 12 Aug 2017 12:17:12 GMT
 - 删除用户
 
 
-```Shell
-http DELETE :3000/api/user/delete/2
+```shell
+$ http DELETE :3000/api/user/delete/2
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 37
