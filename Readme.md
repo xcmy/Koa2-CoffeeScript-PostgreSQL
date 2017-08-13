@@ -91,15 +91,15 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 
     
         $ npm install --save sequelize
-    //驱动
-    $ npm install --save pg pg-hstore
+        //驱动
+        $ npm install --save pg pg-hstore
     
 
 3. [***validator.js数据验证***](https://github.com/chriso/validator.js)
 
 
         //在项目根目录下
-    $ npm install --save validator
+        $ npm install --save validator
 
     
     
@@ -121,8 +121,8 @@ app.listen 3000,(err)->
 
 
         //根目录下启动项目
-    $ coffee  index.coffee
-    server start success
+        $ coffee  index.coffee
+        server start success
 
 
 - 测试
