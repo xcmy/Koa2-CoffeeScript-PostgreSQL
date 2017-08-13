@@ -65,7 +65,7 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 
 生成的`package.json`文件如下
 
-```
+```json
 {
   "name": "kcpdemo",
   "version": "1.0.0",
@@ -107,7 +107,7 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 - 在`index.js`文件中创建启动代码
 
 
-```
+```coffeescript
 koa = require("koa")
 app = new koa()
 
@@ -128,7 +128,7 @@ app.listen 3000,(err)->
 
 - 测试
 
-```
+```linux
 $ http :3000
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -148,7 +148,7 @@ hello koa2
 - 用postgres创建一个数据库`xcmy`(名字随便起)
 - 在根目录下创建一个文件夹lib，用来保存数据模型，在lib下创建`index.coffee`来初始化数据库。
 
-```
+```coffeescript
 //index.coffee文件
 Sequelize = require "sequelize"
 //
@@ -166,7 +166,7 @@ module.exports.sequelize = sequelize
 
 - 在根目录下index.coffee文件中引入数据库初始化。
 
-```
+```coffeescript
 koa = require("koa")
 app = new koa()
 
@@ -183,7 +183,7 @@ app.listen 3000,(err)->
 - 重新启动
 
 
-```
+```linux
 $ coffee  index.coffee
 server start success
 db Connected success
@@ -208,7 +208,7 @@ __index.coffee
 
 
 
-```
+```coffeescript
 Sequelize = require("../lib").Sequelize
 sequelize = require("../lib").sequelize
 
@@ -290,7 +290,7 @@ __index.coffee
 - 在`user.coffee`中创建User模型的数据接口
 
 
-```
+```coffeescript
 router = require("koa-router")({prefix:"/user"})
 validator = require("validator")
 User = require("../lib/user")
@@ -345,7 +345,7 @@ module.exports = router
 
 - 在入口文件`index.coffee`配置路由
 
-```
+```coffeescript
 koa = require("koa")
 app = new koa()
 Router = require("koa-router")
@@ -379,7 +379,7 @@ app.listen 3000,(err)->
 
 - 初始化数据模型，重启项目
 
-```
+```linux
 $ coffee  index.coffee
 server start success
 Executing (default): SELECT 1+1 AS result
@@ -395,7 +395,7 @@ Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.in
 - User创建
 
 
-```
+```linux
 //若参数不合法
 $ http :3000/api/user/create realName=小明 gender=male birthday=1993-09-09 email=xcmy@163.com height=60
 HTTP/1.1 200 OK
@@ -445,7 +445,7 @@ Date: Sat, 12 Aug 2017 12:11:13 GMT
 ```
 - User获取，从上面看到创建了一个id=1的用户
 
-```
+```linux
 //单个用户
 $ http :3000/api/user/get/1
 HTTP/1.1 200 OK
@@ -495,7 +495,7 @@ Date: Sat, 12 Aug 2017 12:17:12 GMT
 - 删除用户
 
 
-```
+```linux
 http DELETE :3000/api/user/delete/2
 HTTP/1.1 200 OK
 Connection: keep-alive
