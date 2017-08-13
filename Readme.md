@@ -59,11 +59,9 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 - 创建一个入口文件`index.coffee`
 - 创建[***package.json文件***](http://javascript.ruanyifeng.com/nodejs/packagejson.html#toc4)。（`package.json`文件可以手工编写，也可以使用`npm init`命令自动生成，输入名字和`main`文件`index.coffee`，注意名字不能大写，其余按回车自动生成）。
 
-
-
-    //到项目根目录下  
-    $ cd kcpDemo  
-    $ npm init  
+        //到项目根目录下  
+        $ cd kcpDemo  
+        $ npm init  
     
 生成的`package.json`文件如下
 
@@ -87,12 +85,12 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 
 
 
-    $ npm install --save koa 
+        $ npm install --save koa 
 
 2. [**Sequelize安装**](http://docs.sequelizejs.com/)
 
     
-    $ npm install --save sequelize
+        $ npm install --save sequelize
     //驱动
     $ npm install --save pg pg-hstore
     
@@ -100,7 +98,7 @@ GitHub地址<https://github.com/jakubroztocil/httpie>
 3. [***validator.js数据验证***](https://github.com/chriso/validator.js)
 
 
-    //在项目根目录下
+        //在项目根目录下
     $ npm install --save validator
 
     
@@ -122,7 +120,7 @@ app.listen 3000,(err)->
 - 启动服务
 
 
-    //根目录下启动项目
+        //根目录下启动项目
     $ coffee  index.coffee
     server start success
 
