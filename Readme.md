@@ -128,7 +128,7 @@ app.listen 3000,(err)->
 
 - 测试
 
-```linux
+```Shell
 $ http :3000
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -183,7 +183,7 @@ app.listen 3000,(err)->
 - 重新启动
 
 
-```linux
+```Shell
 $ coffee  index.coffee
 server start success
 db Connected success
@@ -379,7 +379,7 @@ app.listen 3000,(err)->
 
 - 初始化数据模型，重启项目
 
-```linux
+```Shell
 $ coffee  index.coffee
 server start success
 Executing (default): SELECT 1+1 AS result
@@ -395,7 +395,7 @@ Executing (default): SELECT i.relname AS name, ix.indisprimary AS primary, ix.in
 - User创建
 
 
-```linux
+```Shell
 //若参数不合法
 $ http :3000/api/user/create realName=小明 gender=male birthday=1993-09-09 email=xcmy@163.com height=60
 HTTP/1.1 200 OK
@@ -445,7 +445,7 @@ Date: Sat, 12 Aug 2017 12:11:13 GMT
 ```
 - User获取，从上面看到创建了一个id=1的用户
 
-```linux
+```Shell
 //单个用户
 $ http :3000/api/user/get/1
 HTTP/1.1 200 OK
@@ -495,7 +495,7 @@ Date: Sat, 12 Aug 2017 12:17:12 GMT
 - 删除用户
 
 
-```linux
+```Shell
 http DELETE :3000/api/user/delete/2
 HTTP/1.1 200 OK
 Connection: keep-alive
